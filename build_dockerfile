@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Build Docker image
+      docker_image:
+        name: web-db-server
+        path: /path/to/Dockerfile/directory
+        state: present1~
